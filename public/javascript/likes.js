@@ -1,0 +1,27 @@
+async function likesClickHandler(event) {
+    event.preventDefault();
+
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
+
+    const response = await fetch('/api/posts/likes', {
+        method: 'PUT',
+        body: JSON.stringify({
+            post_id: id
+        }),
+        headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.ok) {
+        document.location.reload();
+    }
+
+    else {
+        alert(response.statusText)
+    }
+};
+
+//Event listener
+
+document.querySelector(/* the likes btn */).addEventListener('click', likesClickHandler);
