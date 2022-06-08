@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const req = require('express/lib/request');
 const sequelize = require('../config/connection');
 const { User, Post, Comment, Likes } = require('../models');
 const withAuthentication = require('../utils/auth');
@@ -80,6 +81,33 @@ router.get('/edit/:id', withAuthentication, (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+//POST route to send an email
+router.post('/send', function (req, res, next) {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: req.session.user_id,
+            pass: req.session.password
+        }
+    })
+
+    const mailOptions = {
+        from: `${req.body.email}`,
+        to: '',
+        subject: `${req.body.name}`,
+        text: `${req.body.message}`,
+        replyTo: `${req.body.email}`
+    }
+
+    transporter.sendMail(mailOptions, function(err, res) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('here is the res: ', res);
+        }
+    })
 });
 
 module.exports = router;
