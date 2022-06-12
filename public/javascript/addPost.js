@@ -23,4 +23,4 @@ async function newPostHandler (event) {
 
 //Event listener
 
-document.querySelector(/* add post button */).addEventListener('submit', newPostHandler);
+document.querySelector('.newPost-form').addEventListener('submit', newPostHandler);
