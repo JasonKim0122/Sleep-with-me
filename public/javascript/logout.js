@@ -14,4 +14,4 @@ async function logout() {
 }
 
 //Event listener
-document.getElementById(/* ID of logout button */).addEventListener('click', logout);
+document.getElementById('.logout-btn').addEventListener('click', logout);

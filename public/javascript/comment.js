@@ -3,8 +3,8 @@
 async function commentFormHandler (event) {
     event.preventDefault();
 
-    //name =" " should be the name we have in our handlebars template for the form
-    const text = document.querySelector('textarea[name="   "').value.trim();
+    
+    const text = document.querySelector('textarea[name="commentBody"]').value.trim();
     const post_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
@@ -30,4 +30,4 @@ async function commentFormHandler (event) {
 };
 
 //Event listener
-document.querySelector(/* our comment button */).addEventListener('submit', commentFormHandler);
+document.querySelector('.commentForm').addEventListener('submit', commentFormHandler);

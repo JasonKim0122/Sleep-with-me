@@ -1,0 +1,9 @@
+<article class="post">
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="info">
+        {{likes_count}} {{format_plural "likes" likes_count}} by {{user.username}} on {{format_date created_at}}
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+</article>
