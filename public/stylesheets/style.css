@@ -15,6 +15,19 @@ body {
     background-color: var(--tertiary-color);
 }
 
+.halfMoon {
+    position:static;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0 0 #efd19f;
+}
+
 a {
     text-decoration: none;
     font-weight: bold;
@@ -75,8 +88,9 @@ form label  {
 header{
     border-bottom: 1px solid var(--secondary-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding: 0 70px 19px 0px;
 }
 
 .delete-btn {
