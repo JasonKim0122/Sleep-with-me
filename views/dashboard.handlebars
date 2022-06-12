@@ -1,0 +1,29 @@
+<section>
+    <h2> 
+        Share your Dreams!
+    </h2>
+
+    <form class="newPost-form">
+        <div>
+            <label for="postTitle">Title</label>
+            <input type="text" id="postTitle" name="postTitle" />
+        </div>
+        <button type="submit" class="form-btn">Create Post</button>
+    </form>
+</section>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{>post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="editLink">Edit Post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<script src=""
