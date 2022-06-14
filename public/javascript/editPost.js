@@ -1,7 +1,7 @@
 async function editPostHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name="    "]').value.trim();
+    const title = document.querySelector('input[name="postTitle"]').value.trim();
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];

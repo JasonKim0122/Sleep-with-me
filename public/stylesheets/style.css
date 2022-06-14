@@ -39,6 +39,10 @@ a:hover {
     color: var(--primary-color);
 }
 
+.info {
+    color: var(--primary-color);
+}
+
 button {
     border: 0;
     padding: 0;
@@ -72,12 +76,12 @@ form label  {
 }
 
 main {
-    padding-left: 35%;
+    padding-left: 25%;
     padding-bottom: 20% ;
 }
 
 .loginForm, .signupForm {
-    padding-left: 10%;
+    padding-left: 20%;
 }
 
 .main-body {
@@ -111,9 +115,14 @@ header{
     line-height: 120%;
 }
 
-.post .title {
+.post {
     color: var(--primary-color);
-    font-size: 85%;
+    font-size: 22px;
+}
+
+.title {
+    font-size: 90%;
+    color: var(--secondary-color);
 }
 
 .editLink {
@@ -129,13 +138,39 @@ header{
 }
 
 .commentForm {
+    margin-top: 40px;
+    padding-left: 20%;
     margin-bottom: 4%;
 }
 
-.comment {
-    padding: 2%;
+.like-btn {
+    margin-left: 45px;
 }
 
+.comment {
+    border: 1px solid var(--secondary-color) ;
+    border-radius: 25px;
+    padding: 2%;
+    width: 60%;
+}
+
+.meta {
+    color: rgb(55, 55, 111);
+}
+
+.text {
+    color: var(--tertiary-color);
+}
+
+h2 {
+    padding-left: 15%;
+    color: var(--primary-color);
+}
+
+
+.newPost-form {
+    padding-left: 15%;
+}
 .newPost-form input {
     width: 250px;
 }
@@ -154,4 +189,5 @@ footer {
 footer h2 {
     color: var(--primary-color);
     padding-top: 5%;
+    padding-right: 20%;
 }
