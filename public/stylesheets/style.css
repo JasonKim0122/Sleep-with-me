@@ -131,6 +131,7 @@ header{
 
 .like-btn {
     background-color: rgb(157, 231, 157);
+    margin-left: 45px;
 }
 
 .like-btn:hover {
@@ -143,9 +144,6 @@ header{
     margin-bottom: 4%;
 }
 
-.like-btn {
-    margin-left: 45px;
-}
 
 .comment {
     border: 1px solid var(--secondary-color) ;

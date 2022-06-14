@@ -70,7 +70,7 @@ router.get('/edit/:id', withAuthentication, (req, res) => {
 
             res.render('edit-post', {
                 post,
-                loggedIn
+                loggedIn:true
             });
         } else {
             res.status(404).end();
