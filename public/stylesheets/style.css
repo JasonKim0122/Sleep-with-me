@@ -65,13 +65,19 @@ textarea:focus, input:focus {
     border: 1px solid var(--primary-color);
 }
 
-form {
-    padding-left: 40%;
-}
 
 form label  {
     display: block;
     color: var(--primary-color);
+}
+
+main {
+    padding-left: 35%;
+    padding-bottom: 20% ;
+}
+
+.loginForm, .signupForm {
+    padding-left: 10%;
 }
 
 .main-body {

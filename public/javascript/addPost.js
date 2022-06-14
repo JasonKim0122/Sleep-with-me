@@ -1,7 +1,7 @@
 async function newPostHandler (event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name"   "]').value;
+    const title = document.querySelector('input[name="postTitle"]').value;
     //maybe url or chart will see
 
     const response = await fetch('/api/posts', {
