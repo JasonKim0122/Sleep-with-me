@@ -140,7 +140,7 @@ header{
 
 .commentForm {
     margin-top: 40px;
-    padding-left: 20%;
+    padding-left: 17%;
     margin-bottom: 4%;
 }
 
@@ -173,9 +173,19 @@ h2 {
     width: 250px;
 }
 
-.editPost-form {
+.editPost-form input {
+    margin-left: 17%;
     margin-bottom: 4%;
 }
+
+.editPost-info{
+    margin-left: 5%;
+}
+
+.edit-btn {
+    padding-left: 18%;
+}
+
 
 footer {
     display: flex;

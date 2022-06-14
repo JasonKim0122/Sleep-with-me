@@ -46,6 +46,20 @@ router.get('/:id', (req, res) => {
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
         ],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
     })
     .then(dbPostData => {
         if (!dbPostData) {
@@ -66,7 +80,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuthentication, (req, res) => {
     Post.create({
         title: req.body.title,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
