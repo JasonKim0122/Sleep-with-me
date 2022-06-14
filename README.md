@@ -11,3 +11,6 @@
 
 # Deployed at:
 * https://sleep-with-me-project.herokuapp.com/
+
+# Video Instructions
+* https://drive.google.com/file/d/1U2nUjJQ3myAZh5ogAaC1Kjw7hpz6Ls8u/view
